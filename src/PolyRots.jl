@@ -3,7 +3,8 @@ using PyPlot
 using DelimitedFiles
 
 @info "Retrieving the two-dimensional field"
-img = imgload("m13.png")
+pathfile = joinpath(abspath(""), "data/img.png")
+img = imgload(pathfile)
 
 @info "Splitting the carriers"
 img_r = chsplit(img, 1)
@@ -40,17 +41,17 @@ for x in -j:j
    end
 end
 
-simg = VisitingICF2021.imgrep(mr, mg, mb)
+simg = PixelsGT.imgrep(mr, mg, mb)
 
 @info "Writting the results"
-writedlm("imgr.dat", mr)
-writedlm("imgg.dat", mg)
-writedlm("imgb.dat", mb)
+writedlm(joinpath(abspath(""), "data/imgr.dat"), mr)
+writedlm(joinpath(abspath(""), "data/imgg.dat"), mg)
+writedlm(joinpath(abspath(""), "data/imgb.dat"), mb)
 
 @info "Showing the transformed two-dimensional field"
 begin
     imshow(simg)
     box(false)
     axis("off")
-    savefig("imgrot.png")
+    savefig(joinpath(abspath(""), "data/imgrot.png"))
 end

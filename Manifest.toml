@@ -497,7 +497,7 @@ version = "1.1.0"
 
 [[PixelsGT]]
 deps = ["HypergeometricFunctions", "Images", "SpecialFunctions"]
-git-tree-sha1 = "8144ee64cdaecc7792471dd7fea879be23a3e600"
+git-tree-sha1 = "ac127e4d2867614a5d4287aff62ee8c1c8109937"
 repo-rev = "main"
 repo-url = "https://github.com/rurz/PixelsGT.jl"
 uuid = "b317fbfa-b46a-11eb-3512-4f4d22d99383"
