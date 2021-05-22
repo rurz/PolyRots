@@ -1,9 +1,12 @@
+using Pkg
+Pkg.activate(".")
+
 using PixelsGT
 using PyPlot
 using DelimitedFiles
 
 @info "Retrieving the two-dimensional field"
-pathfile = joinpath(abspath(""), "data/img.png")
+pathfile = joinpath(abspath(""), "data/img_origin/rcross13.png")
 img = imgload(pathfile)
 
 @info "Splitting the carriers"
