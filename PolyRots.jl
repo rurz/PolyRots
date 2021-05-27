@@ -4,6 +4,7 @@ Pkg.activate(".")
 using PixelsGT
 using PyPlot
 using DelimitedFiles
+using Polyester
 
 @info "Retrieving the two-dimensional field"
 pathfile = joinpath(abspath(""), "data/img_origin/m21_a.png")
