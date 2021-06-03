@@ -6,7 +6,7 @@ using PyPlot
 using DelimitedFiles
 
 @info "Retrieving the two-dimensional field"
-pathfile = joinpath(abspath(""), "data/img_origin/rgbb_dots31.png")
+pathfile = joinpath(abspath(""), "data/img_origin/diag7.png")
 img = imgload(pathfile)
 
 @info "Splitting the carriers"
@@ -48,14 +48,14 @@ end
 simg = PixelsGT.imgrep(mr, mg, mb)
 
 @info "Writting the results"
-writedlm(joinpath(abspath(""), "data/data_target/rgbb_dots31_array_r.dat"), mr)
-writedlm(joinpath(abspath(""), "data/data_target/rgbb_dots31__array_g.dat"), mg)
-writedlm(joinpath(abspath(""), "data/data_target/rgbb_dots31_array_b.dat"), mb)
+writedlm(joinpath(abspath(""), "data/data_target/diag7_array_r.dat"), mr)
+writedlm(joinpath(abspath(""), "data/data_target/diag7_array_g.dat"), mg)
+writedlm(joinpath(abspath(""), "data/data_target/diag7_array_b.dat"), mb)
 
 @info "Showing the transformed two-dimensional field"
 begin
     imshow(simg)
     box(false)
     axis("off")
-    savefig(joinpath(abspath(""), "data/img_target/rgbb_dots31_img_rot.png"))
+    savefig(joinpath(abspath(""), "data/img_target/diag7_img_rot.png"))
 end

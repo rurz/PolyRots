@@ -1,7 +1,8 @@
-#using Pkg
-#Pkg.activate(".")
+using Pkg
+Pkg.activate(".")
 
 using PixelsGT
+using PyPlot
 
 pathfile = joinpath(abspath(""), "data/img_origin/diag7.png")
 img = imgload(pathfile)
@@ -102,3 +103,10 @@ mg = mgd + mgu
 mb = mbd + mbu
 
 recos = PixelsGT.imgrep(mr, mg, mb)
+
+begin
+    imshow(recos)
+    box(false)
+    axis("off")
+    savefig(joinpath(abspath(""), "data/img_target/diag7_img_rot.png"))
+end
