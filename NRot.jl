@@ -1,6 +1,7 @@
 using PixelsGT
 
 rd(Q₁, Q₂, q₁, q₂, n, m, θ, j) = real(conj(LKd(Q₁, Q₂, n, m, j)) * exp(-1im * θ * m) * LKd(q₁, q₂, n, m, j))
+
 ru(Q₁, Q₂, q₁, q₂, n, m, θ, j) = real(conj(LKu(Q₁, Q₂, n, m, j)) * exp(-1im * θ * m) * LKu(q₁, q₂, n, m, j))
 
 export RdM, RuM
