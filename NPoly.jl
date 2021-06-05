@@ -43,7 +43,10 @@ mbu = zeros((2 * j + 1, 2 * j + 1))
 ####################################################################################################
 # LOWER AND UPPER MODE MATRICES
 
+@info "Calculating lower modes matrix"
 mdown = RdM(ang, j)
+
+@info "Calculating upper modes matrix"
 mup = RuM(ang, j)
 
 ####################################################################################################
