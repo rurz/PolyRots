@@ -13,7 +13,7 @@ include("NRot.jl")
 # PREAMBLE ADQUISITIONS
 
 @info "Retrieving the two-dimensional field"
-pathfile = joinpath(abspath(""), "data/img_origin/m25A.png")
+pathfile = joinpath(abspath(""), "data/img_origin/rgbb_dots29.png")
 img = imgload(pathfile)
 
 @info "Splitting the carriers"
@@ -25,7 +25,7 @@ img_b = chsplit(img, 3)
 # PARAMETERS
 
 const j = Integer((size(img_r)[1] - 1)/2)
-const ang = pi/6
+const ang = pi/3
 
 @info "The 'spin' parameter of the field is j = $j"
 @info "The rotation angle is $ang"
@@ -122,17 +122,17 @@ repd_2 = PixelsGT.imgrep(mr_2, mg_2, mr_2)
 repd_3 = PixelsGT.imgrep(mr_3, mg_3, mr_3)
 
 @info "Writting the results"
-writedlm(joinpath(abspath(""), "data/data_target/m25_r1.dat"), mr_1)
-writedlm(joinpath(abspath(""), "data/data_target/m25_g1.dat"), mg_1)
-writedlm(joinpath(abspath(""), "data/data_target/m25_b1.dat"), mb_1)
+writedlm(joinpath(abspath(""), "data/data_target/rgbb_dots29_r1.dat"), mr_1)
+writedlm(joinpath(abspath(""), "data/data_target/rgbb_dots29_g1.dat"), mg_1)
+writedlm(joinpath(abspath(""), "data/data_target/rgbb_dots29_b1.dat"), mb_1)
 
-writedlm(joinpath(abspath(""), "data/data_target/m25_r2.dat"), mr_2)
-writedlm(joinpath(abspath(""), "data/data_target/m25_g2.dat"), mg_2)
-writedlm(joinpath(abspath(""), "data/data_target/m25_b2.dat"), mb_2)
+writedlm(joinpath(abspath(""), "data/data_target/rgbb_dots29_r2.dat"), mr_2)
+writedlm(joinpath(abspath(""), "data/data_target/rgbb_dots29_g2.dat"), mg_2)
+writedlm(joinpath(abspath(""), "data/data_target/rgbb_dots29_b2.dat"), mb_2)
 
-writedlm(joinpath(abspath(""), "data/data_target/m25_r3.dat"), mr_3)
-writedlm(joinpath(abspath(""), "data/data_target/m25_g3.dat"), mg_3)
-writedlm(joinpath(abspath(""), "data/data_target/m25_b3.dat"), mb_3)
+writedlm(joinpath(abspath(""), "data/data_target/rgbb_dots29_r3.dat"), mr_3)
+writedlm(joinpath(abspath(""), "data/data_target/rgbb_dots29_g3.dat"), mg_3)
+writedlm(joinpath(abspath(""), "data/data_target/rgbb_dots29_b3.dat"), mb_3)
 
 
 @info "Showing the transformed two-dimensional field"
@@ -140,17 +140,17 @@ begin
     imshow(repd_1)
     box(false)
     axis("off")
-    savefig(joinpath(abspath(""), "data/img_target/m25_rot1.png"))
+    savefig(joinpath(abspath(""), "data/img_target/rgbb_dots29_rot1.png"))
 end
 begin
     imshow(repd_2)
     box(false)
     axis("off")
-    savefig(joinpath(abspath(""), "data/img_target/m25_rot2.png"))
+    savefig(joinpath(abspath(""), "data/img_target/rgbb_dots29_rot2.png"))
 end
 begin
     imshow(repd_3)
     box(false)
     axis("off")
-    savefig(joinpath(abspath(""), "data/img_target/m25_rot3.png"))
+    savefig(joinpath(abspath(""), "data/img_target/rgbb_dots29_rot3.png"))
 end
