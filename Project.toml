@@ -1,5 +1,9 @@
 [deps]
 BenchmarkTools = "6e4b80f9-dd63-53aa-95a3-0cdb28fa8baf"
+ImageIO = "82e4d734-157c-48bb-816b-45c225c6df19"
+ImageMagick = "6218d12a-5da1-5696-b52f-db25d2ecc6d1"
+ImageView = "86fae568-95e7-573e-a6b2-d8a6b900c9ef"
+Images = "916415d5-f1e6-5110-898d-aaa5f9f070e0"
 LoopVectorization = "bdcacae8-1622-11e9-2a5c-532679323890"
 OffsetArrays = "6fe1bfb0-de20-5000-8ca7-80f57d26f881"
 PixelsGT = "b317fbfa-b46a-11eb-3512-4f4d22d99383"

@@ -4,7 +4,7 @@ Pkg.activate(".")
 using PixelsGT
 using PyPlot
 
-pathfile = joinpath(abspath(""), "data/img_origin/diag7.png")
+pathfile = joinpath(abspath(""), "data/img_origin/bw9x9.png")
 img = imgload(pathfile)
 
 img_r = chsplit(img, 1)
@@ -108,5 +108,5 @@ begin
     imshow(recos)
     box(false)
     axis("off")
-    savefig(joinpath(abspath(""), "data/img_target/diag7_img_rot.png"))
+    savefig(joinpath(abspath(""), "data/img_target/bw9x9_rot.png"))
 end
