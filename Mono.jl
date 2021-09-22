@@ -13,7 +13,7 @@ include("NRot.jl")
 # PREAMBLE ADQUISITIONS
 
 @info "Retrieving the two-dimensional field"
-pathfile = joinpath(abspath(""), "data/img_origin/bw22x22.png")
+pathfile = joinpath(abspath(""), "data/img_origin/bwmono16x16.png")
 img = imgload(pathfile)
 
 ####################################################################################################
@@ -56,4 +56,4 @@ for x in 1:Integer(2*j+1)
 end
 
 @info "Writting the results"
-writedlm(joinpath(abspath(""), "data/data_target/bwmono22x22_r.dat"), imgrot)
+writedlm(joinpath(abspath(""), "data/data_target/bwmono16x16_r.dat"), imgrot)
